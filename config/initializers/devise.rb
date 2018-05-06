@@ -9,7 +9,7 @@ Devise.setup do |config|
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
   # config.secret_key = '3db6ac57d9b588b533705a1c4a6c007f7ee7c14423cedc44bde261d497e7851bd798a2f19cd07a1ac21fdc175969731042bc8f59a80f68f4a6cd92730875a2b9'
-  
+
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
   # config.parent_controller = 'DeviseController'
@@ -53,7 +53,7 @@ Devise.setup do |config|
   # These keys will be downcased upon creating or modifying a user and when used
   # to authenticate or find a user. Default is :email.
   config.case_insensitive_keys = [:email]
-
+  config.secret_key = 'cae533076450d2fe5ac6d3df138fd84e897d1201093e3779b22bad7e5f03a273ce854d38e0f157b0588430dfd6e93a729a2390ed961401bf5c24f697f5a23881'
   # Configure which authentication keys should have whitespace stripped.
   # These keys will have whitespace before and after removed upon creating or
   # modifying a user and when used to authenticate or find a user. Default is :email.
