@@ -1,24 +1,5 @@
-# README
+Web application that allows the user to upload pictures of cats they find and their location as well as serving as a map to find furry friends near you.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[![Build Status](https://codeship.com/projects/28df2470-3393-0136-3fef-0abf1177ac3f/status?branch=master)
+[![Code Climate](https://codeclimate.com/github/KWongEE/MENOW/badges/gpa.svg)](https://codeclimate.com/github/KWongEE/MENOW)
+[![Coverage Status](https://coveralls.io/repos/github/KWongEE/MENOW/badge.svg?branch=master)](https://coveralls.io/github/KWongEE/MENOW?branch=master)
