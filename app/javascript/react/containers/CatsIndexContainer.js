@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 
+
 class CatsIndexContainer extends Component {
   constructor(props) {
     super(props)
@@ -19,20 +20,27 @@ class CatsIndexContainer extends Component {
      })
      .then(response => response.json())
      .then(body => {
-       this.setState({
-
-         cats: body
-        })
+       this.setState({ cats: body })
      })
      .catch(error => console.error(`${error.message}`))
   }
 
   render() {
-    return(
-     <div>
-
-     </div>
-   )
+    if (this.state.cats.length == 0){
+      return(<div></div>)
+      }
+    else{
+      let cats = this.state.cats.map(cat =>{
+        return(
+        <div>
+          <div>{cat.name}</div>
+          <div>{cat.description}</div>
+          <div>{cat.location}</div>
+        </div>
+        );
+      })
+      return(<div>{cats}</div>)
+    }
   }
 }
 
