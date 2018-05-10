@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import CatTile from '../components/CatTile'
+
 
 class CatsIndexContainer extends Component {
   constructor(props) {
@@ -19,20 +21,29 @@ class CatsIndexContainer extends Component {
      })
      .then(response => response.json())
      .then(body => {
-       this.setState({
-
-         cats: body
-        })
+       this.setState({ cats: body })
      })
      .catch(error => console.error(`${error.message}`))
   }
 
   render() {
-    return(
-     <div>
-
-     </div>
-   )
+    if (this.state.cats.length == 0){
+      return(<div></div>)
+      }
+    else{
+      let cats = this.state.cats.map(cat =>{
+        return(
+    <CatTile
+      key={cat.id}
+      id={cat.id}
+      name={cat.name}
+      description={cat.description}
+      location={cat.location}
+    />
+        );
+      })
+      return(<div>{cats}</div>)
+    }
   }
 }
 
