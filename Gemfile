@@ -35,6 +35,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 group :test do
   gem 'coveralls', require: false
+  gem 'database_cleaner'
 end
 group :development, :test do
 
