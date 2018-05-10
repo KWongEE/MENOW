@@ -66,3 +66,4 @@ gem 'devise'
 gem 'foundation-rails', '~> 5.0'
 gem 'webpacker', '~> 3.3'
 gem "fog-aws"
+gem 'carrierwave', '~> 1.0'
