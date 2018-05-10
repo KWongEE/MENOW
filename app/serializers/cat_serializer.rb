@@ -1,7 +1,7 @@
 class CatSerializer < ActiveModel::Serializer
-  attributes :id, :name, :description, :location, :owner
+  attributes :id, :name, :description, :location, :spotter
 
-  def owner
+  def spotter
     object.user.email
   end
 end

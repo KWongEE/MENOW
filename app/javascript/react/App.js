@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, IndexRoute, Router, browserHistory } from 'react-router';
 import CatsIndexContainer from './containers/CatsIndexContainer'
+import CatShowContainer from './containers/CatShowContainer'
 
 
 
@@ -9,9 +10,9 @@ const App = (props) => {
     <Router history={browserHistory}>
       <Route path='/'>
         <IndexRoute component={CatsIndexContainer} />
-
-      </Route>
+        <Route path="/cats/:id" component={CatShowContainer}/>
         <Route path="*" component={CatsIndexContainer} />
+      </Route>
     </Router>
   )
 }
