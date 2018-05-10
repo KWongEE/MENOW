@@ -8,9 +8,6 @@ class Api::V1::CatsController < ApplicationController
     render json: Cat.find(params[:id])
   end
 
-def new
-end
-
   def create
     cat = Cat.new(cat_params)
     if current_user
@@ -27,7 +24,7 @@ end
   end
 
   def cat_params
-    params.require(:cat).permit(:title,:description,:location)
+    params.require(:cats).permit(:name,:description,:location)
   end
 
 

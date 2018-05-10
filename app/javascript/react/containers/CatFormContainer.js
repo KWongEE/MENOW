@@ -6,13 +6,13 @@ class CatFormContainer extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      title: '',
+      name: '',
       description: '',
       location: ''
     }
 
     this.handleFormSubmit = this.handleFormSubmit.bind(this)
-    this.handleTitleChange = this.handleTitleChange.bind(this)
+    this.handleNameChange = this.handleNameChange.bind(this)
     this.handleDescriptionChange = this.handleDescriptionChange.bind(this)
     this.handleLocationChange = this.handleLocationChange.bind(this)
     this.handleClearForm = this.handleClearForm.bind(this)
@@ -21,11 +21,11 @@ class CatFormContainer extends Component {
 
   handleClearForm(event) {
     event.preventDefault()
-    this.setState({ title: "", description: "", location: "" })
+    this.setState({ name: "", description: "", location: "" })
   }
 
-  handleTitleChange(event) {
-    this.setState({ title: event.target.value })
+  handleNameChange(event) {
+    this.setState({ name: event.target.value })
   }
 
   handleDescriptionChange(event) {
@@ -43,15 +43,17 @@ class CatFormContainer extends Component {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(submission)
+    }).then( ()=> {
+      browserHistory.push('/')
     })
   }
 
   handleFormSubmit(event) {
   event.preventDefault();
-    if(this.state.title.trim() != '' && this.state.description.trim() != '' && this.state.location.trim() != '') {
+    if(this.state.name.trim() != '' && this.state.description.trim() != '' && this.state.location.trim() != '') {
       let formPayload = {
         cats: {
-          title: this.state.title,
+          name: this.state.name,
           description: this.state.description,
           location: this.state.location
         }
@@ -63,24 +65,14 @@ class CatFormContainer extends Component {
 }
 
   render() {
-    let errorDiv;
-    let errorItems;
-    if (Object.keys(this.state.errors).length > 0) {
-      errorItems = Object.values(this.state.errors).map(error => {
-        return(<li key={error}>{error}</li>)
-      })
-      errorDiv = <div className="callout alert">{errorItems}</div>
-    }
-
     return(
       <div>
       <form className="new-cat-form callout" onSubmit={this.handleFormSubmit}>
-        {errorDiv}
         <TextField
-          content={this.state.title}
-          label="title"
-          name="title"
-          handlerFunction={this.handleTitleChange}
+          content={this.state.name}
+          label="name"
+          name="name"
+          handlerFunction={this.handleNameChange}
         />
         <TextField
           content={this.state.description}
