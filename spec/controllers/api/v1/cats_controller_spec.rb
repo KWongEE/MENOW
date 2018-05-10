@@ -1,6 +1,4 @@
 require 'rails_helper'
-require 'pry'
-
 
 RSpec.describe Api::V1::CatsController, type: :controller do
   before(:each) do
