@@ -1,7 +1,11 @@
 class Api::V1::CatsController < ApplicationController
   skip_before_action :verify_authenticity_token
   def index
-      render json: Cat.all.reverse
+    render json: Cat.all.reverse
+  end
+
+  def show
+    render json: Cat.find(params[:id])
   end
 
 def new
@@ -25,4 +29,6 @@ end
   def cat_params
     params.require(:cat).permit(:title,:description,:location)
   end
+
+
 end
