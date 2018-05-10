@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import CatTile from '../components/CatTile'
 
 
 class CatsIndexContainer extends Component {
@@ -32,11 +33,13 @@ class CatsIndexContainer extends Component {
     else{
       let cats = this.state.cats.map(cat =>{
         return(
-        <div>
-          <div>{cat.name}</div>
-          <div>{cat.description}</div>
-          <div>{cat.location}</div>
-        </div>
+    <CatTile
+      key={cat.id}
+      id={cat.id}
+      name={cat.name}
+      description={cat.description}
+      location={cat.location}
+    />
         );
       })
       return(<div>{cats}</div>)
