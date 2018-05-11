@@ -28,6 +28,12 @@ class CatShowContainer extends Component {
   }
 
   render(){
+    if(this.state.cats.length === 0) {
+      return(
+        <div></div>
+      );
+    }
+    else{
     return(<div>
       <CatShow
         key={this.state.cats.id}
@@ -36,8 +42,10 @@ class CatShowContainer extends Component {
         description={this.state.cats.description}
         location={this.state.cats.location}
         spotter={this.state.cats.spotter}
+        image={this.state.cats.image}
       />
     </div>)
+    }
   }
 }
 

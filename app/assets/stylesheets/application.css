@@ -15,3 +15,10 @@
  *= require foundation_and_overrides
 
  */
+.avatar {
+  height:40px;
+  width:50px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+}
