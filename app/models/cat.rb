@@ -4,6 +4,6 @@ class Cat < ApplicationRecord
   validates :location, null:false
 
   belongs_to :user
-  
+
   mount_uploader :image, CatPhotoUploader
 end

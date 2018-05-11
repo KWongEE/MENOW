@@ -8,10 +8,10 @@ feature "profile photo" do
     fill_in "Email", with: "ash@s-mart.com"
     fill_in "Password", with: "boomstick!3vilisd3ad"
     fill_in "Password confirmation", with: "boomstick!3vilisd3ad"
-    attach_file :user_profile_photo, "#{Rails.root}/spec/support/images/photo.jpg"
+    attach_file :user_avatar, "#{Rails.root}/spec/support/images/photo.jpg"
     click_button "Sign up"
 
-    expect(page).to have_content("Welcome! You have signed up successfully.")
-    # expect(page).to have_css("img[src*='photo.jpg']")
+    expect(page).to have_content("Welcome! You have signed up. Pawtastic!")
+    expect(page).to have_css("img[src*='photo.jpg']")
   end
 end

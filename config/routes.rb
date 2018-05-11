@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-
+  resources :cats, only: [:new, :create]
 
   namespace :api do
     namespace :v1 do

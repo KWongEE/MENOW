@@ -7,6 +7,7 @@ const CatShow = (props) => {
       <div>Cat Description: {props.description}</div>
       <div>Last seen: {props.location}</div>
       <div>Who found it?: {props.spotter}</div>
+      <img src={props.image.url} />
     </div>
   )
 }
