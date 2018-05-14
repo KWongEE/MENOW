@@ -38,7 +38,6 @@ class UserShowContainer extends Component {
           name={cat.name}
           description={cat.description}
           location={cat.location}
-          spotter={cat.spotter}
           image={cat.image}
         />
       )
