@@ -15,12 +15,14 @@
  *= require foundation_and_overrides
 
  */
+ .a {
+   display: inline-grid;
+ }
 .avatar {
   height:40px;
-  width:50px;
+  width:100px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 10px;
 }
 
 .catShow {
@@ -28,4 +30,11 @@
   align-items: center;
   justify-content: center;
   flex-direction:column;
+}
+
+#header-background {
+  background-image: image-url("catbanner.jpg");
+  background-repeat: no-repeat;
+  height: 150px;
+  background-size: 100% 100%;
 }
