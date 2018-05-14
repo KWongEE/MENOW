@@ -3,7 +3,7 @@ import { Route, IndexRoute, Router, browserHistory } from 'react-router';
 import CatsIndexContainer from './containers/CatsIndexContainer'
 import CatFormContainer from './containers/CatFormContainer'
 import CatShowContainer from './containers/CatShowContainer'
-
+import UserShowContainer from './containers/UserShowContainer'
 
 
 const App = (props) => {
@@ -13,6 +13,7 @@ const App = (props) => {
         <IndexRoute component={CatsIndexContainer} />
         <Route path='/cats/new' component={CatFormContainer} />
         <Route path="/cats/:id" component={CatShowContainer}/>
+        <Route path="/users/:id" component={UserShowContainer}/>
         <Route path="*" component={CatsIndexContainer} />
       </Route>
     </Router>
