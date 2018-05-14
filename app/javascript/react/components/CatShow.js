@@ -2,7 +2,6 @@ import React from 'react'
 
 const CatShow = (props) => {
   return(
-    <div>
     <div className="catShow">
       <div>Cat Name ฅ(*ΦωΦ*)ฅ: {props.name}</div><br></br>
       <div>Cat Description: {props.description}</div><br></br>
