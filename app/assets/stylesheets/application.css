@@ -22,3 +22,10 @@
   margin-right: auto;
   padding-top: 10px;
 }
+
+.catShow {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction:column;
+}
