@@ -9,10 +9,10 @@ const UserShow = (props) => {
   }
   else{
   return(
-    <div>
-      <div>Your Name: {props.username}</div>
+    <div className="userShowTile">
+      <div>Username: {props.username}</div>
       <div>Email: {props.email}</div>
-      <img src={props.avatar.url} />
+      <img src={props.avatar.url} width="350" height="263" />
     </div>
   )
 }
