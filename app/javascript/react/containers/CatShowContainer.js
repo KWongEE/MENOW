@@ -33,7 +33,7 @@ class CatShowContainer extends Component {
       );
     }
     else{
-    return(<div>
+    return(<div className="catShow">
       <CatShow
         key={this.state.cats.id}
         id={this.state.cats.id}

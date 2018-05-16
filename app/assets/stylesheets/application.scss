@@ -13,7 +13,6 @@
  *= require_tree .
  *= require_self
  *= require foundation_and_overrides
-
  */
 .avatar {
   height:40px;
@@ -28,4 +27,39 @@
   align-items: center;
   justify-content: center;
   flex-direction:column;
+}
+
+.userPage {
+border-radius: 25px;
+border: 1.2px solid black;
+padding: 20px;
+width: 50%;
+height: 100%;
+background-color: white;
+margin: auto;
+margin-top: 5%;
+margin-bottom:5%;
+box-shadow: 1px black;
+}
+
+body {
+  background-color: #FFF8DC;
+}
+
+.catShow {
+border-radius: 25px;
+border: 1.2px solid black;
+padding: 20px;
+width: 50%;
+height: 100%;
+background-color: white;
+margin: auto;
+margin-top: 5%;
+margin-bottom:5%;
+box-shadow: 1px black;
+}
+
+#map{
+  width:80%;
+  height:100%;
 }

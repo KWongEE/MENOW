@@ -1,3 +1,4 @@
+<% require 'pry' %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,6 +41,9 @@
       </ul>
     </section>
   </nav>
+<%- if current_page?('/') -%>
+  <div id="map"></div>
+<%- end -%>
 
   <%- flash.each do |key, value| -%>
     <div class="flash flash-<%= key %>">

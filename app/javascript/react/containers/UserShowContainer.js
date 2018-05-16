@@ -43,7 +43,7 @@ class UserShowContainer extends Component {
       )
     })
 
-    return(<div>
+    return(<div className="userPage">
       <UserShow
         key={this.state.user.id}
         id={this.state.user.id}
@@ -53,7 +53,7 @@ class UserShowContainer extends Component {
       />
       <br></br>
       <br></br>
-      <div>{cats}</div>
+      <div className="catsUserPage">{cats}</div>
     </div>)
   }else{
     return(
