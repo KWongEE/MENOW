@@ -14,7 +14,7 @@ const App = (props) => {
         <Route path='/cats/new' component={CatFormContainer} />
         <Route path="/cats/:id" component={CatShowContainer}/>
         <Route path="/users/:id" component={UserShowContainer}/>
-        <Route path="*" component={CatsIndexContainer} />
+        <Route path="*" component={MapContainer} />
       </Route>
     </Router>
   )
