@@ -14,16 +14,6 @@
  *= require_self
  *= require foundation_and_overrides
  */
- .a {
-   display: inline-grid;
- }
-<<<<<<< HEAD
-.avatar {
-  height:40px;
-  width:100px;
-  margin-left: auto;
-  margin-right: auto;
-=======
 
 .avatar {
   height:40px;
@@ -36,7 +26,6 @@
 height:40px;
 width:60px;
 padding-bottom: 2px;
->>>>>>> master
 }
 
 .catShow {
@@ -46,44 +35,175 @@ padding-bottom: 2px;
   flex-direction:column;
 }
 
-#header-background {
-  background-image: image-url("catbanner.png");
-  background-repeat: no-repeat;
-  height: 150px;
-  background-size: 100% 100%;
+.userPage {
+  border-radius: 25px;
+  border: 1.2px solid black;
+  padding: 20px;
+  width: 50%;
+  height: 100%;
+  background-color: white;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom:5%;
+  opacity: 0.9;
+}
+div.catform-header{
+  font-size:20px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+div.cat-form{
+  border-radius: 25px;
+  border: 1.2px solid black;
+  padding: 20px;
+  width: 50%;
+  height: 60%;
+  background-color: white;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom:5%;
+  opacity: 0.9;
+  top:50%;
+  left:50%;
+}
+div.devise-signup{
+  font-size: 20px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+div.devise-form-signup{
+  border-radius: 25px;
+  border: 1.2px solid black;
+  padding: 20px;
+  width: 50%;
+  height: 70%;
+  background-color: white;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom:5%;
+  opacity: 0.9;
+  top:50%;
+  left:50%;
 }
 
-.userPage {
-border-radius: 25px;
-border: 1.2px solid black;
-padding: 20px;
-width: 50%;
-height: 100%;
-background-color: white;
-margin: auto;
-margin-top: 5%;
-margin-bottom:5%;
-box-shadow: 1px black;
+div.devise-form-signin{
+  border-radius: 25px;
+  border: 1.2px solid black;
+  padding: 20px;
+  width: 50%;
+  height: 50%;
+  background-color: white;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom:5%;
+  opacity: 0.9;
+  top:50%;
+  left:50%;
+}
+input#user_username{
+  margin-top: -20px;
+}
+
+input#user_email{
+  margin-top: -20px;
+}
+
+input#user_password{
+  margin-top: -20px;
+}
+input#user_password_confirmation{
+  margin-top:-20px;
+}
+input{
+  margin-left: 20px;
+}
+div.devise-login{
+  font-size: 20px;
+  margin-left: 20px;
+  margin-bottom: 10px;
 }
 
 body {
-  background-color: #FFF8DC;
+  background-image: image-url("catbackground.jpg");
+  background-size:auto;
+  background-repeat:no-repeat;
+  background-position:center;
+  overflow-x: scroll;
+  position:inherit;
 }
 
 .catShow {
-border-radius: 25px;
-border: 1.2px solid black;
-padding: 20px;
-width: 50%;
-height: 100%;
-background-color: white;
-margin: auto;
-margin-top: 5%;
-margin-bottom:5%;
-box-shadow: 1px black;
+  border-radius: 25px;
+  border: 1.2px solid black;
+  padding: 20px;
+  width: 50%;
+  height: 100%;
+  background-color: white;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom:5%;
+  box-shadow: 1px black;
+}
+label{
+  color:black;
+}
+h1{
+  color:black;
+}
+#map{
+  width:100%;
+  height:80%;
+  margin: auto;
+  padding:-2px;
+  margin-top: 10px;
 }
 
-#map{
+div.field {
   width:80%;
-  height:100%;
+  margin-left: 20px;
+}
+input#cat_name{
+  margin-top: -20px;
+}
+
+textarea#cat_description{
+  margin-top: -20px;
+}
+
+textarea#cat_location{
+  margin-top:-20px;
+}
+
+input.btn.btn-primary{
+  margin-left: 20px;
+}
+h1{
+  margin-left: 20px;
+}
+h1.title{
+  text-align:center;
+  vertical-align: center;
+}
+a{
+  color:black;
+}
+a:hover {
+  color: inherit;
+}
+.title{
+  font-family: 'Chewy', cursive;
+  font-size: 3em;
+}
+input#cat_image{
+  color:black;
+  font-size:14px;
+}
+
+div#error_explanation{
+  color:yellow;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+h2{
+  color:yellow;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
