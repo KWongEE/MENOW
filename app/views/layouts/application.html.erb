@@ -1,18 +1,8 @@
+<% require 'pry' %>
 <!DOCTYPE html>
 <html>
 <head>
   <title>Menow</title>
-  <div id="map"></div>
-  <script>
-    function initMap(){
-      var options = {
-        zoom:8,
-
-      }
-    }
-  </script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=[GOOGLE_KEY]&callback=initMap"
-   async defer></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= javascript_pack_tag 'application' %>
@@ -51,6 +41,9 @@
       </ul>
     </section>
   </nav>
+<%- if current_page?('/') -%>
+  <div id="map"></div>
+<%- end -%>
 
   <%- flash.each do |key, value| -%>
     <div class="flash flash-<%= key %>">

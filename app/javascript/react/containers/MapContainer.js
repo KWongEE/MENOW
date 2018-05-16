@@ -16,7 +16,7 @@ class MapContainer extends Component {
   }
 
   callMap(){
-    window.initMap = this.initMap
+    window.initMap = this.initMap;
     loadJS("https://maps.googleapis.com/maps/api/js?key=AIzaSyDHJiq_ybQuonWlaOSroWGWGB1_pSmZLhU&callback=initMap")
   }
 
@@ -24,14 +24,13 @@ class MapContainer extends Component {
     fetch('/api/v1/cats')
       .then(response => {
         if (response.ok){
-          return response;
+          return response.json();
         } else {
           let errorMessage = `${response.status} (${response.statusText})`,
             error = new Error(errorMessage);
           throw(error);
         }
       })
-      .then(response => response.json())
       .then(body => {
         this.setState({
           cats: body,
