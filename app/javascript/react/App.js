@@ -1,6 +1,5 @@
 import React from 'react';
 import { Route, IndexRoute, Router, browserHistory } from 'react-router';
-import CatsIndexContainer from './containers/CatsIndexContainer'
 import CatFormContainer from './containers/CatFormContainer'
 import CatShowContainer from './containers/CatShowContainer'
 import UserShowContainer from './containers/UserShowContainer'
