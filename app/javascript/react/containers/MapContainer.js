@@ -13,13 +13,11 @@ class MapContainer extends Component {
 
   componentDidMount(){
     this.callMap()
-    console.log("componentDidMount works!");
   }
 
   callMap(){
     window.initMap = this.initMap
     loadJS("https://maps.googleapis.com/maps/api/js?key=AIzaSyDHJiq_ybQuonWlaOSroWGWGB1_pSmZLhU&callback=initMap")
-    console.log("callMap works!");
   }
 
   initMap(){
@@ -40,7 +38,7 @@ class MapContainer extends Component {
         })
         let allAddresses = []
         let potato = this.state.cats.map(cat => {
-          allAddresses.push({name: cat.name, location: cat.location, lat: parseFloat(cat.lat), lng: parseFloat(cat.lng)})
+          allAddresses.push({name: cat.name, cat_id:cat.id, location: cat.location, lat: parseFloat(cat.lat), lng: parseFloat(cat.lng)})
         })
           this.setState({ catAddresses: allAddresses })
 
@@ -53,23 +51,26 @@ class MapContainer extends Component {
 
         let locations = []
         this.state.catAddresses.forEach(mapCat => {
-          locations.push([{catName: mapCat.name}, {lat: mapCat.lat, lng: mapCat.lng}])
+          locations.push([{catName: mapCat.name},{catID:mapCat.cat_id}, {lat: mapCat.lat, lng: mapCat.lng}])
         });
 
         let markers = []
         locations.forEach(location => {
           let marker = new google.maps.Marker({
-            position: location[1],
-            label: location[0].name
+            position: location[2],
+            label: location[0].name,
+            icon: 'https://s3.amazonaws.com/menow-production/uploads/cat_marker.png',
+            url: `/cats/${location[1].catID}`
+          });
+          google.maps.event.addListener(marker, 'click', function() {
+          window.location.href = this.url;
           });
           markers.push(marker)
           marker.setMap(this.map)
         })
       })
       .catch(error => console.error(`Error in ${error.message}`));
-      console.log("initMap works!")
   }
-
   render(){
     return(
       <div className="map" id="map"> </div>
