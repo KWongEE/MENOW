@@ -17,11 +17,26 @@
  .a {
    display: inline-grid;
  }
+<<<<<<< HEAD
 .avatar {
   height:40px;
   width:100px;
   margin-left: auto;
   margin-right: auto;
+=======
+
+.avatar {
+  height:40px;
+  width:90px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.avatar a img{
+height:40px;
+width:60px;
+padding-bottom: 2px;
+>>>>>>> master
 }
 
 .catShow {
