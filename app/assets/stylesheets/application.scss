@@ -14,12 +14,21 @@
  *= require_self
  *= require foundation_and_overrides
  */
+ .a {
+   display: inline-grid;
+ }
+
 .avatar {
   height:40px;
-  width:50px;
+  width:90px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 10px;
+}
+
+.avatar a img{
+height:40px;
+width:60px;
+padding-bottom: 2px;
 }
 
 .catShow {
