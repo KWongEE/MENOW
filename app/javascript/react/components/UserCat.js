@@ -6,7 +6,7 @@ const UserCat = (props) => {
       <div>Cat Name ฅ(*ΦωΦ*)ฅ: {props.name}</div>
       <div>Cat Description: {props.description}</div>
       <div>Last seen: {props.location}</div>
-      <img src={props.image.url} />
+      <img src={props.image.url} width="350" height="263" />
     </div>
   )
 }

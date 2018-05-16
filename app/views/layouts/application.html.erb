@@ -6,6 +6,7 @@
     <h1 class="title"> <%= link_to('MENOW', '/') %> </h1>
   </header>
   <title>Menow</title>
+<<<<<<< HEAD
   <!-- <div id="map"></div> -->
   <!-- <script>
     function initMap(){
@@ -17,6 +18,8 @@
   </script>
   <script src="https://maps.googleapis.com/maps/api/js?key=[GOOGLE_KEY]&callback=initMap"
    async defer></script> -->
+=======
+>>>>>>> master
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= javascript_pack_tag 'application' %>
@@ -55,6 +58,9 @@
       </ul>
     </section>
   </nav>
+<%- if current_page?('/') -%>
+  <div id="map"></div>
+<%- end -%>
 
   <%- flash.each do |key, value| -%>
     <div class="flash flash-<%= key %>">
