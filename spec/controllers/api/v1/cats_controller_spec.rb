@@ -1,5 +1,5 @@
 require 'rails_helper'
-
+require 'pry'
 RSpec.describe Api::V1::CatsController, type: :controller do
   before(:each) do
     user1 = User.create(email: "test@test.com", password: "password")
@@ -30,6 +30,7 @@ RSpec.describe Api::V1::CatsController, type: :controller do
 
   describe "GET#show" do
     before(:each) do
+       DatabaseCleaner.clean_with :truncation
       @user = User.create(email: "tester@gmail.com", password: "password")
       @cat = Cat.create(id: 1, name: "Joshua", description: "Long maned cat", location: "77 Street", user: @user)
     end
@@ -45,6 +46,8 @@ RSpec.describe Api::V1::CatsController, type: :controller do
       expect(returned_json["description"]).to eq @cat.description
       expect(returned_json["location"]).to eq @cat.location
       expect(returned_json["id"]).to eq @cat.id
+      expect(returned_json["lat"]).to eq @cat.lat
+      expect(returned_json["lng"]).to eq @cat.lng
       expect(returned_json["user_id"]).to eq @user.id
 
       expect(returned_json).to be_kind_of(Hash)
