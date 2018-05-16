@@ -9,8 +9,8 @@
 </div>
 <% end %>
 
-<h1>New Cat Form</h1>
 <div class="cat-form">
+  <div class="catform-header">Add a cat</div>
 <%= form_for @cat, html: { multipart: true } do |f| %>
 <div class="field">
   <%= f.label :name %><br />
