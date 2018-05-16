@@ -13,10 +13,7 @@
  *= require_tree .
  *= require_self
  *= require foundation_and_overrides
-
  */
-
-
 .avatar {
   height:40px;
   width:50px;
@@ -44,10 +41,10 @@ margin-top: 5%;
 margin-bottom:5%;
 box-shadow: 1px black;
 }
+
 body {
   background-color: #FFF8DC;
 }
-
 
 .catShow {
 border-radius: 25px;
