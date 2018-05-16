@@ -76,7 +76,7 @@ div.devise-form-signup{
   border: 1.2px solid black;
   padding: 20px;
   width: 50%;
-  height: 70%;
+  height: fit-content;
   background-color: white;
   margin: auto;
   margin-top: 5%;
@@ -200,10 +200,10 @@ input#cat_image{
 }
 
 div#error_explanation{
-  color:yellow;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  color:#FF8181;
+
 }
 h2{
-  color:yellow;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  color:#FF8181;
+  font-size: 22px;
 }
