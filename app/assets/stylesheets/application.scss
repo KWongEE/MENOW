@@ -57,7 +57,7 @@ div.cat-form{
   border: 1.2px solid black;
   padding: 20px;
   width: 50%;
-  height: 60%;
+  height: fit-content;
   background-color: white;
   margin: auto;
   margin-top: 5%;
@@ -91,7 +91,7 @@ div.devise-form-signin{
   border: 1.2px solid black;
   padding: 20px;
   width: 50%;
-  height: 50%;
+  height: fit-content;
   background-color: white;
   margin: auto;
   margin-top: 5%;
@@ -201,9 +201,16 @@ input#cat_image{
 
 div#error_explanation{
   color:#FF8181;
+  margin-left:20px;
 
 }
 h2{
   color:#FF8181;
   font-size: 22px;
+  margin-left:20px;
+}
+
+div.flash.flash-alert{
+    color:#FF8181;
+    margin-left: 20px;
 }

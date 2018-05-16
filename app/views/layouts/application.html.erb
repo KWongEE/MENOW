@@ -49,11 +49,7 @@
   <div id="map"></div>
 <%- end -%>
 
-  <%- flash.each do |key, value| -%>
-    <div class="flash flash-<%= key %>">
-      <%= value %>
-    </div>
-  <%- end -%>
+
 
   <%= yield %>
 

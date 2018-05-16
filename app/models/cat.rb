@@ -1,9 +1,8 @@
 class Cat < ApplicationRecord
-  # acts_as_mappable
 
-  validates :name, null:false
-  validates :description, null:false
-  validates :location, null:false
+  validates :name,  presence: true;
+  validates :description,  presence: true;
+  validates :location, presence: true;
 
   belongs_to :user
 
@@ -21,9 +20,3 @@ class Cat < ApplicationRecord
     geocode_new_location if location_changed?
   end
 end
-
-# <GoogleApiWrapper>
-#   <Map>
-#     <Marker position={{lat: cat.lat, lng: cat.lng}}
-#   </Map>
-# </GoogleApiWrapper>

@@ -4,6 +4,9 @@ class CatsController < ApplicationController
   end
 
   def create
+    # if cat_params["name"] == "" || cat_params["description"] == ""
+    #   render "new"
+    # end
     @cat = Cat.new(cat_params)
     if current_user
       @cat.user = current_user
@@ -11,7 +14,7 @@ class CatsController < ApplicationController
       @cat.user_id = 1
     end
     if @cat.save
-      redirect_to cats_path, notice: "#{@cat.name} has been uploaded."
+      redirect_to '/', notice: "#{@cat.name} has been uploaded."
     else
       render "new"
     end
