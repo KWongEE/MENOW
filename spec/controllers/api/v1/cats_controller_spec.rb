@@ -1,5 +1,4 @@
 require 'rails_helper'
-require 'pry'
 RSpec.describe Api::V1::CatsController, type: :controller do
   before(:each) do
     user1 = User.create(email: "test@test.com", password: "password")

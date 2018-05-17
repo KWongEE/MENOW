@@ -7,5 +7,4 @@ class Api::V1::CatsController < ApplicationController
   def show
     render json: Cat.find(params[:id])
   end
-
 end

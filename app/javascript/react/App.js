@@ -5,7 +5,6 @@ import CatShowContainer from './containers/CatShowContainer'
 import UserShowContainer from './containers/UserShowContainer'
 import MapContainer from './containers/MapContainer'
 
-
 const App = (props) => {
   return(
     <Router history={browserHistory}>

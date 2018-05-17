@@ -4,9 +4,6 @@ class CatsController < ApplicationController
   end
 
   def create
-    # if cat_params["name"] == "" || cat_params["description"] == ""
-    #   render "new"
-    # end
     @cat = Cat.new(cat_params)
     if current_user
       @cat.user = current_user
