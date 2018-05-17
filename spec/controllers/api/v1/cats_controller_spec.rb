@@ -29,7 +29,6 @@ RSpec.describe Api::V1::CatsController, type: :controller do
 
   describe "GET#show" do
     before(:each) do
-       DatabaseCleaner.clean_with :truncation
       @user = User.create(email: "tester@gmail.com", password: "password")
       @cat = Cat.create(id: 1, name: "Joshua", description: "Long maned cat", location: "77 Street", user: @user)
     end
