@@ -5,7 +5,8 @@ class MapContainer extends Component {
   constructor(props){
     super(props)
     this.state ={
-      cats: [],
+      cats: []
+
     }
     this.initMap=this.initMap.bind(this)
     this.callMap=this.callMap.bind(this)
@@ -53,20 +54,45 @@ class MapContainer extends Component {
           locations.push([{catName: mapCat.name},{catID:mapCat.cat_id}, {lat: mapCat.lat, lng: mapCat.lng}])
         });
 
+        var contentString = `<div>${locations[0][0].catName}</div>`;
+
+      let infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
         let markers = []
         locations.forEach(location => {
           let marker = new google.maps.Marker({
             position: location[2],
             label: location[0].name,
+            animation: google.maps.Animation.DROP,
             icon: 'https://s3.amazonaws.com/menow-production/uploads/cat_marker.png',
             url: `/cats/${location[1].catID}`
           });
+          function toggleBounce() {
+            if (marker.getAnimation() !== null) {
+              marker.setAnimation(null);
+            } else {
+              marker.setAnimation(google.maps.Animation.BOUNCE);
+            }
+          }
+
+          google.maps.event.addListener(marker,'mouseover', function(){
+          infowindow.open(map, marker);
+          toggleBounce();
+          });
+
           google.maps.event.addListener(marker, 'click', function() {
           window.location.href = this.url;
+          toggleBounce();
           });
+          google.maps.event.addListener(marker,'mouseout', function(){
+          toggleBounce();
+          });
+
           markers.push(marker)
           marker.setMap(this.map)
         })
+
       })
       .catch(error => console.error(`Error in ${error.message}`));
   }
