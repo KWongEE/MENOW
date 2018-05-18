@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router'
 
 const CatShow = (props) => {
   return(
@@ -8,6 +9,8 @@ const CatShow = (props) => {
       <div>Last seen: {props.location}</div><br></br>
       <div>Who found it?: {props.spotter}</div><br></br>
       <img src={props.image.url} width="350" height="263" />
+      <div>Have you seen this cat?</div>
+      <a href={`/cats/${props.id}/edit`}>Update here!</a>
   </div>
   )
 }
