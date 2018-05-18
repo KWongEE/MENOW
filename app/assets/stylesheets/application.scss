@@ -14,6 +14,10 @@
  *= require_self
  *= require foundation_and_overrides
  */
+ * {
+  font-size: 110%;
+  font-family: 'Chewy', cursive;
+ }
 
 .avatar {
   height:40px;
@@ -36,6 +40,8 @@ padding-bottom: 2px;
 }
 
 .userPage {
+  background: rgb(192,174,238);
+background: radial-gradient(circle, rgba(192,174,238,0.7343312324929971) 20%, rgba(233,148,148,0.8687850140056023) 80%);
   border-radius: 25px;
   border: 1.2px solid black;
   padding: 20px;
@@ -46,6 +52,38 @@ padding-bottom: 2px;
   margin-top: 5%;
   margin-bottom:5%;
   opacity: 0.9;
+}
+
+.user-info {
+  border-radius: 25px;
+  border: 1.2px solid black;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  // margin-left: 20
+  margin-top: 5%;
+  margin-bottom:5%;
+  opacity: 0.8;
+}
+
+.catsUserPage {
+  border-radius: 25px;
+  border: 1.2px solid black;
+  padding: 20px;
+  width: 50%;
+  height: 100%;
+  background-color: white;
+  // margin: auto;
+  // margin-top: 5%;
+  // margin-bottom:5%;
+  opacity: 0.8;
+}
+.userpageImage{
+  float:left;
+}
+.userpagename{
+  float:right;
 }
 div.catform-header{
   font-size:20px;
