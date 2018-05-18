@@ -17,6 +17,19 @@ class CatsController < ApplicationController
     end
   end
 
+  def edit
+    @cat = Cat.find(params[:id])
+  end
+  
+  def update
+    @cat = Cat.find(params[:id])
+    if @cat.update_attributes(cat_params)
+      redirect_to '/', notice: "#{@cat.name} has been updated."
+    else
+      render "edit"
+    end
+  end
+
   def cat_params
     params.require(:cat).permit(:name,:description,:location,:image)
   end
