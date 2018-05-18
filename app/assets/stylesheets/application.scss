@@ -214,3 +214,14 @@ div.flash.flash-alert{
     color:#FF8181;
     margin-left: 20px;
 }
+
+.gm-style-iw + div {display: none;}
+.gm-style-iw {text-align:center;}
+
+div.infowindow_name{
+  font-size: 15px;
+}
+
+img.infowindow_image{
+  width:75px;
+}
