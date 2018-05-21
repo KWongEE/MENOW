@@ -41,12 +41,12 @@ padding-bottom: 2px;
 
 .userPage {
   background: rgb(192,174,238);
-background: radial-gradient(circle, rgba(192,174,238,0.7343312324929971) 20%, rgba(233,148,148,0.8687850140056023) 80%);
+  background: radial-gradient(circle, rgba(192,174,238,0.7343312324929971) 20%, rgba(233,148,148,0.8687850140056023) 80%);
   border-radius: 25px;
   border: 1.2px solid black;
   padding: 20px;
-  width: 50%;
-  height: 100%;
+  width: fit-content;
+  height: fit-content;
   background-color: white;
   margin: auto;
   margin-top: 5%;
@@ -54,37 +54,29 @@ background: radial-gradient(circle, rgba(192,174,238,0.7343312324929971) 20%, rg
   opacity: 0.9;
 }
 
-.user-info {
-  border-radius: 25px;
-  border: 1.2px solid black;
-  padding: 20px;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  // margin-left: 20
-  margin-top: 5%;
-  margin-bottom:5%;
-  opacity: 0.8;
-}
-
 .catsUserPage {
   border-radius: 25px;
   border: 1.2px solid black;
   padding: 20px;
-  width: 50%;
-  height: 100%;
+  width: 900px;
+  height: 1000px;
   background-color: white;
-  // margin: auto;
-  // margin-top: 5%;
-  // margin-bottom:5%;
   opacity: 0.8;
 }
 .userpageImage{
   float:left;
 }
-.userpagename{
+.userpageInfo{
   float:right;
 }
+// .userpageCatimage{
+//   float:left;
+// }
+// .userpageCatinfo{
+//   float: right;
+//   height:211px;
+//   width: auto;
+// }
 div.catform-header{
   font-size:20px;
   margin-left: 20px;
@@ -169,7 +161,17 @@ body {
   overflow-x: scroll;
   position:inherit;
 }
-
+.userShowTile{
+  border-radius: 25px;
+  border: 1.2px solid black;
+  padding: 20px;
+  width: 750px;
+  height: 300px;
+  background-color: white;
+  margin-top: 5%;
+  margin-bottom:5%;
+  opacity: 0.8;
+}
 .catShow {
   border-radius: 25px;
   border: 1.2px solid black;

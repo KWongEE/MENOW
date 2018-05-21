@@ -11,8 +11,10 @@ const UserShow = (props) => {
   return(
     <div className="userShowTile">
       <img className="userpageImage" src={props.avatar.url} width="350" height="263" />
+      <div className="userpageInfo">
       <div className="userpagename">Username: {props.username}</div>
       <div>Email: {props.email}</div>
+      </div>
     </div>
   )
 }
