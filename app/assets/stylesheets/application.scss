@@ -54,14 +54,15 @@ padding-bottom: 2px;
   opacity: 0.9;
 }
 
-.catsUserPage {
+.userpageCatTile {
   border-radius: 25px;
   border: 1.2px solid black;
   padding: 20px;
-  width: 900px;
-  height: 1000px;
+  width: fit-content;
+  height: fit-content;
   background-color: white;
   opacity: 0.8;
+  overflow: auto;
 }
 .userpageImage{
   float:left;
@@ -69,14 +70,13 @@ padding-bottom: 2px;
 .userpageInfo{
   float:right;
 }
-// .userpageCatimage{
-//   float:left;
-// }
-// .userpageCatinfo{
-//   float: right;
-//   height:211px;
-//   width: auto;
-// }
+.userpageCatimage{
+  float:left;
+}
+.userpageCatinfo{
+  float: right;
+  margin-left: 30px;
+}
 div.catform-header{
   font-size:20px;
   margin-left: 20px;
@@ -146,6 +146,9 @@ input#user_password_confirmation{
 }
 input{
   margin-left: 20px;
+}
+input#user_avatar{
+  font-size: 15px;
 }
 div.devise-login{
   font-size: 20px;

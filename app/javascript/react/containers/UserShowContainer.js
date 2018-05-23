@@ -55,9 +55,7 @@ class UserShowContainer extends Component {
     </div>
       <br></br>
       <br></br>
-      <div className="catsUserPage">
       <div>{cats}</div>
-    </div>
   </div>
   )
   }else{
