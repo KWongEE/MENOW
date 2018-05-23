@@ -14,6 +14,10 @@
  *= require_self
  *= require foundation_and_overrides
  */
+ * {
+  font-size: 110%;
+  font-family: 'Chewy', cursive;
+ }
 
 .avatar {
   height:40px;
@@ -36,16 +40,42 @@ padding-bottom: 2px;
 }
 
 .userPage {
+  background: rgb(192,174,238);
+  background: radial-gradient(circle, rgba(192,174,238,0.7343312324929971) 20%, rgba(233,148,148,0.8687850140056023) 80%);
   border-radius: 25px;
   border: 1.2px solid black;
   padding: 20px;
-  width: 50%;
-  height: 100%;
+  width: fit-content;
+  height: fit-content;
   background-color: white;
   margin: auto;
   margin-top: 5%;
   margin-bottom:5%;
   opacity: 0.9;
+}
+
+.userpageCatTile {
+  border-radius: 25px;
+  border: 1.2px solid black;
+  padding: 20px;
+  width: fit-content;
+  height: fit-content;
+  background-color: white;
+  opacity: 0.8;
+  overflow: auto;
+}
+.userpageImage{
+  float:left;
+}
+.userpageInfo{
+  float:right;
+}
+.userpageCatimage{
+  float:left;
+}
+.userpageCatinfo{
+  float: right;
+  margin-left: 30px;
 }
 div.catform-header{
   font-size:20px;
@@ -117,6 +147,9 @@ input#user_password_confirmation{
 input{
   margin-left: 20px;
 }
+input#user_avatar{
+  font-size: 15px;
+}
 div.devise-login{
   font-size: 20px;
   margin-left: 20px;
@@ -131,7 +164,17 @@ body {
   overflow-x: scroll;
   position:inherit;
 }
-
+.userShowTile{
+  border-radius: 25px;
+  border: 1.2px solid black;
+  padding: 20px;
+  width: 750px;
+  height: 300px;
+  background-color: white;
+  margin-top: 5%;
+  margin-bottom:5%;
+  opacity: 0.8;
+}
 .catShow {
   border-radius: 25px;
   border: 1.2px solid black;

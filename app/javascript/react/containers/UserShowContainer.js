@@ -44,6 +44,7 @@ class UserShowContainer extends Component {
     })
 
     return(<div className="userPage">
+    <div className="user-info">
       <UserShow
         key={this.state.user.id}
         id={this.state.user.id}
@@ -51,10 +52,12 @@ class UserShowContainer extends Component {
         avatar={this.state.user.avatar}
         username={this.state.user.username}
       />
+    </div>
       <br></br>
       <br></br>
-      <div className="catsUserPage">{cats}</div>
-    </div>)
+      <div>{cats}</div>
+  </div>
+  )
   }else{
     return(
       <div></div>
