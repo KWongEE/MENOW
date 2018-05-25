@@ -29,7 +29,7 @@ RSpec.describe Api::V1::UsersController, type: :controller do
       @cat = Cat.create(id: 1, name: "Joshua", description: "Long maned cat", location: "77 Street", user: @user)
     end
 
-    it "should return a cat" do
+    it "should return a user" do
       get :show,  params: { id: @user.id }
       returned_json = JSON.parse(response.body)
 

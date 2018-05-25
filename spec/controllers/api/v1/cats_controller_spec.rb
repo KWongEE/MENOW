@@ -10,7 +10,6 @@ RSpec.describe Api::V1::CatsController, type: :controller do
     it "serves up a JSON with all of my cat data" do
       get :index
       data = JSON.parse(response.body)
-      sleep(5)
 
       expect(response.status).to eq 200
       expect(response.content_type).to eq "application/json"
