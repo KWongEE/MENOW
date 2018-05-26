@@ -43,11 +43,31 @@ class MapContainer extends Component {
           this.setState({ catAddresses: allAddresses })
 
          // Original Map
+
         let boston = {lat: 42.36008, lng: -71.05888}
+
         this.map = new google.maps.Map(document.getElementById('map'), {
           zoom: 14,
           center: boston
         });
+        if (navigator.geolocation) {
+         navigator.geolocation.getCurrentPosition(function(position) {
+           var pos = {
+             lat: position.coords.latitude,
+             lng: position.coords.longitude
+           };
+
+           // infoWindow.setPosition(pos);
+           // infoWindow.setContent('Location found.');
+           // infoWindow.open(map);
+           // map.setCenter(new google.maps.LatLng(latitude, longitude));
+           debugger;
+         }, function() {
+           // handleLocationError(true, infoWindow, map.getCenter());
+         });
+       }
+
+
 
         let locations = []
         this.state.catAddresses.forEach(mapCat => {
