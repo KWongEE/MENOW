@@ -52,22 +52,19 @@ class MapContainer extends Component {
         });
         if (navigator.geolocation) {
          navigator.geolocation.getCurrentPosition(function(position) {
-           var pos = {
+           let pos = {
              lat: position.coords.latitude,
              lng: position.coords.longitude
            };
-
            // infoWindow.setPosition(pos);
            // infoWindow.setContent('Location found.');
            // infoWindow.open(map);
-           // map.setCenter(new google.maps.LatLng(latitude, longitude));
-           debugger;
-         }, function() {
-           // handleLocationError(true, infoWindow, map.getCenter());
+           this.map = new google.maps.Map(document.getElementById('map'), {
+             zoom: 14,
+             center: pos
+           });
          });
        }
-
-
 
         let locations = []
         this.state.catAddresses.forEach(mapCat => {
