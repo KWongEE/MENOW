@@ -1,3 +1,4 @@
+require 'pry'
 class CatsController < ApplicationController
   def new
     @cat = Cat.new
@@ -5,12 +6,14 @@ class CatsController < ApplicationController
 
   def create
     @cat = Cat.new(cat_params)
+    binding.pry
     if current_user
       @cat.user = current_user
     else
       @cat.user_id = 1
     end
     if @cat.save
+      binding.pry
       redirect_to '/', notice: "#{@cat.name} has been uploaded."
     else
       render "new"
@@ -20,7 +23,7 @@ class CatsController < ApplicationController
   def edit
     @cat = Cat.find(params[:id])
   end
-  
+
   def update
     @cat = Cat.find(params[:id])
     if @cat.update_attributes(cat_params)
